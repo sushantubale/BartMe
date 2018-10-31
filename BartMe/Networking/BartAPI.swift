@@ -10,7 +10,7 @@ import Foundation
 
 class BartAPI {
     
-static let bartURL = URL(string:"https://api.bart.gov/api/etd.aspx?cmd=etd&orig=WARM&key=MW9S-E7SL-26DU-VV8V&json=y")
+static let bartURL = URL(string:"https://api.bart.gov/api/stn.aspx?cmd=stns&key=MW9S-E7SL-26DU-VV8V&json=y")
 
     static func getBartData() {
         
