@@ -16,6 +16,7 @@
 		0AFF54A1218810D10025A424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFF549F218810D10025A424 /* LaunchScreen.storyboard */; };
 		0AFF54AC218810D10025A424 /* BartMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFF54AB218810D10025A424 /* BartMeTests.swift */; };
 		0AFF54B7218810D10025A424 /* BartMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFF54B6218810D10025A424 /* BartMeUITests.swift */; };
+		25A4C035218A897E00FD3396 /* BartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4C034218A897E00FD3396 /* BartModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0AFF54B2218810D10025A424 /* BartMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BartMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFF54B6218810D10025A424 /* BartMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartMeUITests.swift; sourceTree = "<group>"; };
 		0AFF54B8218810D10025A424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25A4C034218A897E00FD3396 /* BartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		0AFF5492218810AB0025A424 /* BartMe */ = {
 			isa = PBXGroup;
 			children = (
+				25A4C033218A896300FD3396 /* Model */,
 				0A0E23F821882FFC006F4328 /* Networking */,
 				0AFF5493218810AB0025A424 /* AppDelegate.swift */,
 				0AFF5495218810AB0025A424 /* ViewController.swift */,
@@ -137,6 +140,14 @@
 				0AFF54B8218810D10025A424 /* Info.plist */,
 			);
 			path = BartMeUITests;
+			sourceTree = "<group>";
+		};
+		25A4C033218A896300FD3396 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25A4C034218A897E00FD3396 /* BartModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A4C035218A897E00FD3396 /* BartModel.swift in Sources */,
 				0AFF5496218810AB0025A424 /* ViewController.swift in Sources */,
 				0AFF5494218810AB0025A424 /* AppDelegate.swift in Sources */,
 				0AFF549C218810AB0025A424 /* BartMe.xcdatamodeld in Sources */,

@@ -10,31 +10,35 @@ import Foundation
 
 class BartAPI {
     
-static let bartURL = URL(string:"https://api.bart.gov/api/stn.aspx?cmd=stns&key=MW9S-E7SL-26DU-VV8V&json=y")
-
-    static func getBartData() {
+    static let bartURL = URL(string:"https://api.bart.gov/api/stn.aspx?cmd=stns&key=MW9S-E7SL-26DU-VV8V&json=y")
+    static let bartModel = BartModel()
+    
+    static func getStationList(completionHandler: @escaping ([String]) -> Void) {
         
         URLSession.shared.dataTask(with: bartURL!) { (data, response, error) in
             if error == nil {
                 
-                print("data = \(String(describing: data))")
-                print("response = \(response.debugDescription)")
                 do {
-                    guard let todo = try JSONSerialization.jsonObject(with: data!, options: [])
+                    guard let todo = try JSONSerialization.jsonObject(with: data!, options:.mutableContainers)
                         as? [String: Any] else {
                             print("error trying to convert data to JSON")
                             return
                     }
-                    print("The todo is: " + todo.description)
+                    let root = todo["root"] as? [String: Any]
+                    let stations = root!["stations"] as? [String: Any]
+                    let station = stations!["station"] as? [[String: Any]]
+                    
+                    for (_, value) in (station?.enumerated())! {
+                        BartModel.cityAbbrevations.append(value["abbr"] as! String)
+                    }
+                    
+                    completionHandler(BartModel.cityAbbrevations)
                 } catch  {
                     print("error trying to convert data to JSON")
                     return
                 }
             }
-                
-            else {
-                print("no data")
-            }
+            else { print("no data") }
             }.resume()
     }
 }
