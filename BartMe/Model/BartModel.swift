@@ -9,7 +9,12 @@
 import Foundation
 
 class BartModel {
-    
-    static var cityAbbrevations: [String] = []
 
-}
+      var cityAbbrevations: [String] = []
+      var cityCity: [String] = []
+      var cityCounty: [String] = []
+      var cityZipcode: [String] = []
+      var cityName: [String] = []
+      var cityState: [String] = []
+      var cityAddress: [String] = []
+    }

@@ -8,27 +8,39 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
     var stationLists: [String]?
+    var stationName: [String]?
+    var station1TextField = UITextField()
+    var station2TextField = UITextField()
+    var station1TextFieldSelected: Bool?
+    
+    @IBOutlet weak var stationTableView: UITableView!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        super.viewDidLoad()
+        stationTableView.isHidden = true
         BartAPI.getStationList { [weak self] (bartModel) in
-            self?.assignStationLists(BartModel.cityAbbrevations)
+            self?.assignStationLists(bartModel: bartModel)
         }
         renderUI()
     }
 
-    func assignStationLists(_ stationListValues: [String]) {
-        print(stationListValues)
-        self.stationLists = stationListValues
+    func assignStationLists(bartModel: BartModel) {
+        stationLists = bartModel.cityAbbrevations
+        stationName = bartModel.cityName
+        DispatchQueue.main.async {
+            self.stationTableView.reloadData()
+        }
     }
     
     func renderUI() {
         
-        let station1TextField = UITextField(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 60))
+        station1TextField.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 60)
         view.addSubview(station1TextField)
+        station1TextField.addTarget(self, action: #selector(stationTextfieldAction), for: UIControlEvents.touchDown)
         station1TextField.tag = 0
         station1TextField.delegate = self
         station1TextField.translatesAutoresizingMaskIntoConstraints = false
@@ -39,8 +51,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         station1TextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
         station1TextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
         
-        let station2TextField = UITextField(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 60))
+        station2TextField.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 60)
         view.addSubview(station2TextField)
+        station2TextField.addTarget(self, action: #selector(stationTextfieldAction), for: UIControlEvents.touchDown)
         station2TextField.tag = 1
         station2TextField.delegate = self
         station2TextField.translatesAutoresizingMaskIntoConstraints = false
@@ -61,12 +74,70 @@ class ViewController: UIViewController, UITextFieldDelegate {
         findButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("textfield clicked = \(textField.tag)")
+    @objc func stationTextfieldAction() {
+        
+        DispatchQueue.main.async {
+            self.stationTableView.reloadData()
+        }
+
+        UIView.animate(withDuration: 0.5) {
+            self.stationTableView.isHidden = false
+            self.view.layoutIfNeeded()
+        }
     }
+    
+    // MARK: - UITextfielDelegate methods
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.tag == 0 {
+            station1TextFieldSelected = true
+        }
+        else {
+            station1TextFieldSelected = false
+        }
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return true
     }
+    
+    // MARK: - UITableViewDelegate methods
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return stationLists?.count ?? 48
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = stationTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = stationLists?[indexPath.row]
+        cell.detailTextLabel?.text = stationName?[indexPath.row]
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        stationTableView.deselectRow(at: indexPath, animated: true)
+        UIView.animate(withDuration: 0.5) {
+            let currentCell = self.stationTableView.cellForRow(at: indexPath)
+            guard let station1TextFieldSelected = self.station1TextFieldSelected else { return }
+            
+            if station1TextFieldSelected {
+                self.station1TextField.text = currentCell?.detailTextLabel?.text
+            }
+            else {
+                self.station2TextField.text = currentCell?.detailTextLabel?.text
+            }
+            
+            self.stationTableView.isHidden = true
+            self.view.layoutIfNeeded()
+        }
 
-}
+
+    }
+
+    }
+    
 
