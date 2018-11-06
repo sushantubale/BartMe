@@ -38,7 +38,6 @@ class BartAPI {
                             bartModel.cityState.append(value["city"] as! String)
                             bartModel.cityAddress.append(value["address"] as! String)
                     }
-                    print("bartModel values = \(bartModel)")
                     completionHandler(bartModel)
                 } catch  {
                     print("error trying to convert data to JSON")

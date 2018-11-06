@@ -42,45 +42,67 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func renderUI() {
         
-        station1TextField.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 60)
+        station1TextField.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
         view.addSubview(station1TextField)
         station1TextField.addTarget(self, action: #selector(stationTextfieldAction), for: UIControlEvents.touchDown)
         station1TextField.tag = 0
+        station1TextField.textAlignment = .center
         station1TextField.delegate = self
         station1TextField.translatesAutoresizingMaskIntoConstraints = false
         station1TextField.placeholder = "Bart station 1"
-        station1TextField.layer.cornerRadius = 4.0
-        station1TextField.layer.borderWidth = 2.0
+        station1TextField.layer.cornerRadius = 0.5
+        station1TextField.layer.borderWidth = 0.5
         station1TextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         station1TextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
         station1TextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
         
-        station2TextField.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 60)
+        station2TextField.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
         view.addSubview(station2TextField)
         station2TextField.addTarget(self, action: #selector(stationTextfieldAction), for: UIControlEvents.touchDown)
         station2TextField.tag = 1
+        station2TextField.textAlignment = .center
         station2TextField.delegate = self
         station2TextField.translatesAutoresizingMaskIntoConstraints = false
         station2TextField.placeholder = "Bart station 2"
-        station2TextField.layer.cornerRadius = 4.0
-        station2TextField.layer.borderWidth = 2.0
+        station2TextField.layer.cornerRadius = 0.5
+        station2TextField.layer.borderWidth = 0.5
         station2TextField.topAnchor.constraint(equalTo: station1TextField.bottomAnchor, constant: 30).isActive = true
         station2TextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
         station2TextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
         
-        let findButton = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 60))
+        let findButton = SimpleButton(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 60))
         view.addSubview(findButton)
+        findButton.setBorderWidth(2.0, for: .normal)
+        findButton.setBorderColor(.black, for: .normal)
         findButton.addTarget(self, action: #selector(getRoute), for: UIControlEvents.touchDown)
-        findButton.backgroundColor = UIColor.brown
         findButton.translatesAutoresizingMaskIntoConstraints = false
-        findButton.titleLabel?.text = "Find Route"
         findButton.topAnchor.constraint(equalTo: station2TextField.topAnchor, constant: 100).isActive = true
         findButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
         findButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
     }
     
     @objc func getRoute() {
+        
+        if (station1TextField.text?.isEmpty)! || (station2TextField.text?.isEmpty)! {
+            let alert = UIAlertController(title: "Alert!!!!", message: "Please select a valid BART station for the routes.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                switch action.style{
+                case .default:
+                    print("default")
+                    
+                case .cancel:
+                    print("cancel")
+                    
+                case .destructive:
+                    print("destructive")
+                    
+                    
+                }}))
+            self.present(alert, animated: true, completion: nil)
+            return
 
+        }
+        
         BartAPI.getRoute(self.station1NameForRoute, self.station2NameForRoute) { [weak self] (routeModel) in
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

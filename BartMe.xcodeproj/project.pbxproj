@@ -22,6 +22,9 @@
 		25482832218F99E40062A0A3 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25482831218F99E40062A0A3 /* RouteModel.swift */; };
 		25482833218F99E40062A0A3 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25482831218F99E40062A0A3 /* RouteModel.swift */; };
 		25482834218F99E40062A0A3 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25482831218F99E40062A0A3 /* RouteModel.swift */; };
+		254828372191ED3D0062A0A3 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254828362191ED3D0062A0A3 /* UIHelper.swift */; };
+		254828382191ED3D0062A0A3 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254828362191ED3D0062A0A3 /* UIHelper.swift */; };
+		254828392191ED3D0062A0A3 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254828362191ED3D0062A0A3 /* UIHelper.swift */; };
 		25A4C035218A897E00FD3396 /* BartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4C034218A897E00FD3396 /* BartModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +63,7 @@
 		0AFF54B8218810D10025A424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2548282D218F93D30062A0A3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		25482831218F99E40062A0A3 /* RouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteModel.swift; sourceTree = "<group>"; };
+		254828362191ED3D0062A0A3 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		25A4C034218A897E00FD3396 /* BartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +123,7 @@
 		0AFF5492218810AB0025A424 /* BartMe */ = {
 			isa = PBXGroup;
 			children = (
+				254828352191ED270062A0A3 /* UIHelperFiles */,
 				25A4C033218A896300FD3396 /* Model */,
 				0A0E23F821882FFC006F4328 /* Networking */,
 				2548282B218F93A90062A0A3 /* AppDelegate */,
@@ -173,6 +178,14 @@
 				0AFF5497218810AB0025A424 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		254828352191ED270062A0A3 /* UIHelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				254828362191ED3D0062A0A3 /* UIHelper.swift */,
+			);
+			path = UIHelperFiles;
 			sourceTree = "<group>";
 		};
 		25A4C033218A896300FD3396 /* Model */ = {
@@ -322,6 +335,7 @@
 				0AFF549C218810AB0025A424 /* BartMe.xcdatamodeld in Sources */,
 				25482832218F99E40062A0A3 /* RouteModel.swift in Sources */,
 				0A0E23FA21883042006F4328 /* BartAPI.swift in Sources */,
+				254828372191ED3D0062A0A3 /* UIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +346,7 @@
 				25482833218F99E40062A0A3 /* RouteModel.swift in Sources */,
 				0AFF54AC218810D10025A424 /* BartMeTests.swift in Sources */,
 				2548282F218F93D60062A0A3 /* DetailViewController.swift in Sources */,
+				254828382191ED3D0062A0A3 /* UIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +357,7 @@
 				25482834218F99E40062A0A3 /* RouteModel.swift in Sources */,
 				0AFF54B7218810D10025A424 /* BartMeUITests.swift in Sources */,
 				25482830218F93D60062A0A3 /* DetailViewController.swift in Sources */,
+				254828392191ED3D0062A0A3 /* UIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
