@@ -25,7 +25,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         super.viewDidLoad()
         
-        guard let origin = origin?[0], let destination = destination?[0] else { return }
         if #available(iOS 11.0, *) {
             self.detailViewNavigationController.topAnchor.constraint(
                 equalTo: self.view.safeAreaLayoutGuide.topAnchor
@@ -36,7 +35,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 ).isActive = true
         }
         self.detailViewNavigationController.delegate = self
-        self.detailViewNavigationController.topItem?.title = "\(origin) - \(destination)"
+//        self.detailViewNavigationController.topItem?.title = "\(origin) - \(destination)"
     
         
     }

@@ -1,16 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dLm-7W-npp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--All Routes-->
+        <scene sceneID="TUr-Pi-3ZK">
+            <objects>
+                <viewController id="EPN-1q-bcX" customClass="GetAllRoutesViewController" customModule="BartMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rqu-8F-tIb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7o-qt-dvE">
+                                <rect key="frame" x="16" y="199" width="343" height="30"/>
+                                <state key="normal" title="Get all routes"/>
+                                <connections>
+                                    <action selector="getAllRoutesButttonClicked:" destination="EPN-1q-bcX" eventType="touchUpInside" id="yaH-RE-iYQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Get route from...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZFs-oT-LEF">
+                                <rect key="frame" x="16" y="96" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IyN-P0-dem">
+                                <rect key="frame" x="16" y="384" width="343" height="274"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="274" id="rH5-rC-iWW"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Wom-fa-dUW" detailTextLabel="asy-qr-9rC" style="IBUITableViewCellStyleValue1" id="ffy-vy-WSw">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ffy-vy-WSw" id="LrQ-12-ao3">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wom-fa-dUW">
+                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="asy-qr-9rC">
+                                                    <rect key="frame" x="284" y="12" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="EPN-1q-bcX" id="PFz-GO-Ndv"/>
+                                    <outlet property="delegate" destination="EPN-1q-bcX" id="pDi-Lz-Ezs"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IyN-P0-dem" firstAttribute="leading" secondItem="Y7o-qt-dvE" secondAttribute="trailing" constant="-343" id="1Ws-AL-b65"/>
+                            <constraint firstItem="ykP-qz-3No" firstAttribute="trailing" secondItem="IyN-P0-dem" secondAttribute="trailing" constant="16" id="GFg-jh-tmO"/>
+                            <constraint firstItem="IyN-P0-dem" firstAttribute="leading" secondItem="ykP-qz-3No" secondAttribute="leading" constant="16" id="KVk-ye-Y5a"/>
+                            <constraint firstItem="IyN-P0-dem" firstAttribute="bottom" secondItem="ykP-qz-3No" secondAttribute="bottom" constant="40" id="PPU-DH-cDY"/>
+                            <constraint firstItem="ZFs-oT-LEF" firstAttribute="top" secondItem="ykP-qz-3No" secondAttribute="top" constant="76" id="W6C-Oy-CA6"/>
+                            <constraint firstItem="Y7o-qt-dvE" firstAttribute="top" secondItem="ZFs-oT-LEF" secondAttribute="bottom" constant="73" id="blK-BN-t48"/>
+                            <constraint firstItem="ykP-qz-3No" firstAttribute="trailing" secondItem="ZFs-oT-LEF" secondAttribute="trailing" constant="16" id="cs4-Ff-Q0K"/>
+                            <constraint firstItem="ykP-qz-3No" firstAttribute="trailing" secondItem="Y7o-qt-dvE" secondAttribute="trailing" constant="16" id="nvm-iS-isK"/>
+                            <constraint firstItem="Y7o-qt-dvE" firstAttribute="leading" secondItem="ykP-qz-3No" secondAttribute="leading" constant="16" id="nws-uM-n98"/>
+                            <constraint firstItem="ZFs-oT-LEF" firstAttribute="leading" secondItem="ykP-qz-3No" secondAttribute="leading" constant="16" id="t8u-zI-Fd5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ykP-qz-3No"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="All Routes" id="cH1-ht-jsX"/>
+                    <connections>
+                        <outlet property="getAllrouteButton" destination="Y7o-qt-dvE" id="0a3-TJ-kyY"/>
+                        <outlet property="getAllrouteTextfield" destination="ZFs-oT-LEF" id="sBz-2J-LGc"/>
+                        <outlet property="stationListTableView" destination="IyN-P0-dem" id="65n-Ts-2Wp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tp6-Fb-vcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="794.75262368815595"/>
+        </scene>
+        <!--Specific route-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BartMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,13 +149,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Specific route" id="GaS-2E-JCU"/>
                     <connections>
                         <outlet property="stationTableView" destination="Zgx-fh-RoS" id="S4F-Tz-WjK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="103.89805097451276"/>
+            <point key="canvasLocation" x="1076" y="103.89805097451276"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="JEG-rX-zJU">
@@ -148,7 +234,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUE-IH-iQw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967.20000000000005" y="111.0944527736132"/>
+            <point key="canvasLocation" x="1906.4000000000001" y="111.0944527736132"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="HLH-gR-5qD">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dLm-7W-npp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dnj-3n-sQk">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Kvh-VF-Wy0"/>
+                        <segue destination="EPN-1q-bcX" kind="relationship" relationship="viewControllers" id="gpb-mV-Grp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZu-rl-tuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="449.32533733133437"/>
         </scene>
     </scenes>
 </document>

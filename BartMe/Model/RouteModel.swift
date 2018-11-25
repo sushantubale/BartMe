@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RouteModel {
+struct SpeceficRouteModel {
     
     var origin: [String]? = []
     var destination: [String]? = []
@@ -16,5 +16,14 @@ struct RouteModel {
     var destinationTimes: [String]? = []
     var routeFare: [String]? = []
     var tripTime: [String]? = []
+
+}
+
+struct SingleRouteModel {
+    
+    var destination: [String]? = []
+    var abbrevation: [String]? = []
+    var minutes: [String]? = []
+
 
 }

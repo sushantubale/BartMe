@@ -48,11 +48,11 @@ class BartAPI {
             }.resume()
     }
     
-    static func getRoute(_ station1: String?,_ station2: String?, completionHandler: @escaping (RouteModel) -> Void) {
+    static func specificRoute(_ station1: String?,_ station2: String?, completionHandler: @escaping (SpeceficRouteModel) -> Void) {
     
         let routeURL = URL(string: "http://api.bart.gov/api/sched.aspx?cmd=arrive&orig=\(station1 ?? "12TH")&dest=\(station2 ?? "24TH")&date=now&key=MW9S-E7SL-26DU-VV8V&b=2&a=2&l=1&json=y")
         
-        var routeModel = RouteModel()
+        var routeModel = SpeceficRouteModel()
         
         URLSession.shared.dataTask(with: routeURL!) { (data, response, error) in
             if error == nil {
@@ -63,7 +63,7 @@ class BartAPI {
                             print("error trying to convert data to JSON")
                             return
                     }
-                    print("todo = \(todo)")
+                    //print("todo = \(todo)")
                     let root = todo["root"] as? [String: Any]
                     let schedule = root?["schedule"] as? [String: Any]
                     let request = schedule?["request"] as? [String: Any]
@@ -85,5 +85,52 @@ class BartAPI {
             else { print("no data") }
             }.resume()
 
+    }
+    
+    static func singleRoute(_ station: String?, completionHandler: @escaping (SingleRouteModel) -> Void) {
+        
+        let routeURL = URL(string: "http://api.bart.gov/api/etd.aspx?cmd=etd&orig=\(station ?? "12TH")&key=MW9S-E7SL-26DU-VV8V&json=y")
+        
+        var routeModel = SingleRouteModel()
+
+        URLSession.shared.dataTask(with: routeURL!) { (data, response, error) in
+            if error == nil {
+                
+                do {
+                    guard let todo = try JSONSerialization.jsonObject(with: data!, options:.mutableContainers)
+                        as? [String: Any] else {
+                            print("error trying to convert data to JSON")
+                            return
+                    }
+                    print("todo = \(todo)")
+                    let root = todo["root"] as? [String: Any]
+                    let station = root?["station"] as? [[String: Any]]
+                    var etd: [[String : Any]]?
+                    for (_, value) in (station?.enumerated())! {
+                        
+                        print(value["abbr"])
+                        print(value["name"])
+                        print(value["etd"])
+                        etd = value["etd"] as? [[String: Any]]
+                    }
+                    
+
+                    for (key1, value1) in (etd?.enumerated())! {
+                        
+                        print(value1)
+                        print(value1["estimate"])
+                        
+                    }
+                    
+                    
+                    completionHandler(routeModel)
+                } catch  {
+                    print("error trying to convert data to JSON")
+                    return
+                }
+            }
+            else { print("no data") }
+            }.resume()
+        
     }
 }

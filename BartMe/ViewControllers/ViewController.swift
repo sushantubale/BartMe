@@ -18,7 +18,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var station1NameForRoute: String?
     var station2NameForRoute: String?
     
-    
     @IBOutlet weak var stationTableView: UITableView!
     
     override func viewDidLoad() {
@@ -103,7 +102,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         }
         
-        BartAPI.getRoute(self.station1NameForRoute, self.station2NameForRoute) { [weak self] (routeModel) in
+        BartAPI.specificRoute(self.station1NameForRoute, self.station2NameForRoute) { [weak self] (routeModel) in
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
@@ -116,8 +115,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self?.present(vc, animated: true, completion: nil)
 
             }
-
-            
         }
 
     }
