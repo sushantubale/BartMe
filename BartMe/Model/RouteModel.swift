@@ -24,6 +24,7 @@ struct SingleRouteModel {
     var destination: [String]? = []
     var abbrevation: [String]? = []
     var minutes: [String]? = []
+    var estimate: [String]? = []
 
 
 }

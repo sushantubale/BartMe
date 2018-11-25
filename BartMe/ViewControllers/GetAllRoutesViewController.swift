@@ -43,6 +43,27 @@ class GetAllRoutesViewController: UIViewController, UITableViewDelegate, UITable
         
         BartAPI.singleRoute(self.getAllrouteTextfield.text) { [weak self] (routeModel) in
             
+            guard let routeModel = routeModel else {
+                let alert = UIAlertController(title: "Alert!!!!", message: "No data matched your criteria. Or the BART systems are currently down. We apologize for inconveniene.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                    switch action.style{
+                    case .default:
+                        print("default")
+                        
+                    case .cancel:
+                        print("cancel")
+                        
+                    case .destructive:
+                        print("destructive")
+                        
+                        
+                    }}))
+                DispatchQueue.main.async {
+                    self?.present(alert, animated: true, completion: nil)
+
+                }
+                return
+            }
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
 //            vc.destinationTimes = routeModel.destinationTimes

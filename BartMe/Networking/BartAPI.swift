@@ -87,11 +87,12 @@ class BartAPI {
 
     }
     
-    static func singleRoute(_ station: String?, completionHandler: @escaping (SingleRouteModel) -> Void) {
+    static func singleRoute(_ station: String?, completionHandler: @escaping (SingleRouteModel?) -> Void) {
         
         let routeURL = URL(string: "http://api.bart.gov/api/etd.aspx?cmd=etd&orig=\(station ?? "12TH")&key=MW9S-E7SL-26DU-VV8V&json=y")
         
         var routeModel = SingleRouteModel()
+
 
         URLSession.shared.dataTask(with: routeURL!) { (data, response, error) in
             if error == nil {
@@ -106,23 +107,36 @@ class BartAPI {
                     let root = todo["root"] as? [String: Any]
                     let station = root?["station"] as? [[String: Any]]
                     var etd: [[String : Any]]?
+                    var estimate: Any?
+
                     for (_, value) in (station?.enumerated())! {
                         
-                        print(value["abbr"])
-                        print(value["name"])
-                        print(value["etd"])
                         etd = value["etd"] as? [[String: Any]]
                     }
                     
+                    
+//                    for (key1, value1) in (etd?.enumerated())! {
+//
+//                        routeModel.estimate?.append(value1["estimate"] as! String)
+//
+//                    }
 
-                    for (key1, value1) in (etd?.enumerated())! {
-                        
-                        print(value1)
-                        print(value1["estimate"])
-                        
+                    if let etd = etd {
+                        for i in etd {
+                            estimate = i["estimate"]
+                        }
                     }
                     
+                    else {
+                        completionHandler(nil)
+                    }
                     
+                    if let estimates = estimate as? Array<Dictionary<String, String>> {
+                        for est in estimates{
+                            print(est)
+                        }
+                    }
+
                     completionHandler(routeModel)
                 } catch  {
                     print("error trying to convert data to JSON")
