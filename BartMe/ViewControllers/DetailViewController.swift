@@ -13,14 +13,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var detailTableView: UITableView!
     @IBOutlet weak var detailViewNavigationController: UINavigationBar!
     
-    var origin: [String]? = []
-    var destination: [String]? = []
-    var originTimes: [String]? = []
-    var destinationTimes: [String]? = []
-    var routeFare: [String]? = []
-    var tripTime: [String]? = []
+    var destinationTimes: [String] = []
 
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -35,9 +29,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 ).isActive = true
         }
         self.detailViewNavigationController.delegate = self
-//        self.detailViewNavigationController.topItem?.title = "\(origin) - \(destination)"
-    
-        
     }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
@@ -51,29 +42,15 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.destinationTimes?.count ?? 1
+        return self.destinationTimes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = detailTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let origDest = "\(originTimes![indexPath.row]) - \(destinationTimes![indexPath.row])"
-        cell.textLabel?.text = origDest
-        cell.detailTextLabel?.text = tripTime?[indexPath.row]
+        cell.textLabel?.text = self.destinationTimes[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

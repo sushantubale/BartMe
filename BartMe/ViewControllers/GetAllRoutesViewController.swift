@@ -16,6 +16,8 @@ class GetAllRoutesViewController: UIViewController, UITableViewDelegate, UITable
     var stationLists: [String]?
     var stationName: [String]?
     var station1TextFieldSelected: Bool? = true
+    lazy var abbrevationsStringsArray: [String] = []
+    var finalDestinationTimes: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +43,10 @@ class GetAllRoutesViewController: UIViewController, UITableViewDelegate, UITable
 
     @IBAction func getAllRoutesButttonClicked(_ sender: Any) {
         
+        var index = 0
         BartAPI.singleRoute(self.getAllrouteTextfield.text) { [weak self] (routeModel) in
             
-            guard let routeModel = routeModel else {
+            guard let model = routeModel else {
                 let alert = UIAlertController(title: "Alert!!!!", message: "No data matched your criteria. Or the BART systems are currently down. We apologize for inconveniene.", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
                     switch action.style{
@@ -60,20 +63,30 @@ class GetAllRoutesViewController: UIViewController, UITableViewDelegate, UITable
                     }}))
                 DispatchQueue.main.async {
                     self?.present(alert, animated: true, completion: nil)
-
                 }
                 return
             }
+            guard let routeModel = routeModel else {return}
+            
+            for station in (routeModel.enumerated()) {
+                
+                var inAll: [String] = []
+
+                for k in station.element.estimates.enumerated() {
+                    
+                    inAll.append(k.element.minutes)
+                }
+                var inAll2 = inAll.joined(separator: ",")
+                inAll2.append("        min's to        ")
+                inAll2.append(station.element.abbreviation)
+                self?.finalDestinationTimes.append(inAll2)
+            }
+            
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//            vc.destinationTimes = routeModel.destinationTimes
-//            vc.destination = routeModel.destination
-//            vc.originTimes = routeModel.originTimes
-//            vc.origin = routeModel.origin
-//            vc.tripTime = routeModel.tripTime
+            vc.destinationTimes = (self?.finalDestinationTimes)!
             DispatchQueue.main.async {
                 self?.present(vc, animated: true, completion: nil)
-                
             }
         }
     }
@@ -121,24 +134,12 @@ class GetAllRoutesViewController: UIViewController, UITableViewDelegate, UITable
         UIView.animate(withDuration: 0.5) {
             let currentCell = self.stationListTableView.cellForRow(at: indexPath)
             
-            if let currentCell1 = currentCell?.detailTextLabel?.text, let currentCell2 = currentCell?.textLabel?.text {
+            if let _ = currentCell?.detailTextLabel?.text, let currentCell2 = currentCell?.textLabel?.text {
                 self.getAllrouteTextfield.text =  "\(currentCell2)" 
 
             }
             self.stationListTableView.isHidden = true
             self.view.layoutIfNeeded()
         }
-        
-        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
