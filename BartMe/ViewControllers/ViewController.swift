@@ -17,11 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var station1TextFieldSelected: Bool?
     var station1NameForRoute: String?
     var station2NameForRoute: String?
-    var progressIndicator: UIActivityIndicatorView {
-    let progressInd = UIActivityIndicatorView()
-        progressInd.isHidden = true
-        return progressInd
-    }
+
     @IBOutlet weak var stationTableView: UITableView!
     
     override func viewDidLoad() {
@@ -87,13 +83,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @objc func getRoute() {
         
         guard let testField1 = station1TextField.text, let textField2 = station2TextField.text else {return}
-        if (testField1.isEmpty) || (testField1.isEmpty) {
+        if (testField1.isEmpty) || (textField2.isEmpty) {
             let alert = UIAlertController(title: "Alert!!!!", message: "Please select a valid BART station for the routes.", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [weak self] action in
                 switch action.style{
                 case .default:
-                    print("default")
-                    
+
+                    if testField1.isEmpty {
+                        self?.station1TextField.shake()
+                    }
+                    else {
+                        self?.station2TextField.shake()
+                    }
                 case .cancel:
                     print("cancel")
                     
@@ -107,8 +108,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         }
         
-        BartAPI.specificRoute(self.station1NameForRoute, self.station2NameForRoute) { [weak self] (routeModel) in
+        if station1TextField.text  == station2TextField.text {
+            let alert = UIAlertController(title: "Alert!!!!", message: "Please select two different BART stations.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [weak self] action in
+                switch action.style{
+                case .default:
+                        self?.station1TextField.shake()
+                        self?.station2TextField.shake()
+                case .cancel:
+                    print("cancel")
+                    
+                case .destructive:
+                    print("destructive")
+                    
+                    
+                }}))
+            self.present(alert, animated: true, completion: nil)
+            return
             
+        }
+        BartAPI.specificRoute(self.station1NameForRoute, self.station2NameForRoute) { [weak self] (routeModel) in
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
             vc.destinationTimes = routeModel.destinationTimes
@@ -187,10 +206,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.stationTableView.isHidden = true
             self.view.layoutIfNeeded()
         }
-
-
     }
+}
 
+extension UITextField {
+    func shake(){
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.07
+        animation.repeatCount = 3
+        animation.autoreverses = true
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: self.center.x - 10, y: self.center.y))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: self.center.x + 10, y: self.center.y))
+        self.layer.add(animation, forKey: "position")
     }
-    
-
+}
