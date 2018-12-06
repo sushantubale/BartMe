@@ -1,0 +1,16 @@
+PODS:
+  - TransitionableTab (0.2.0)
+
+DEPENDENCIES:
+  - TransitionableTab (~> 0.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - TransitionableTab
+
+SPEC CHECKSUMS:
+  TransitionableTab: 54a5d0af475033bdb83959fde4e5d6201af7e2ab
+
+PODFILE CHECKSUM: bca51ab22057bc14533a718a621b6d53e70bfae8
+
+COCOAPODS: 1.5.3

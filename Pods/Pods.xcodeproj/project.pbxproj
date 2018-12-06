@@ -1,0 +1,997 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		031F74FFB0C296F3DEB83827EA566C01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		0BC7461573D48AD3DF2DB69B149EA1A5 /* TransitionableTab-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC73EB2F30B0ADD417D39218C7FB822 /* TransitionableTab-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14340903334528B013C1A64CA4D3C699 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B26908EAB037415780FB95BB182E92 /* Options.swift */; };
+		1562D09E6437F8440E557DFEE1638E10 /* Pods-BartMe-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC6E640517397602CE698524144FFBA /* Pods-BartMe-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25312D037E5E818AADCE3B926F3355CB /* DefineAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC0A56A7FAE6E81B28F518B9CBD194 /* DefineAnimation.swift */; };
+		32188D71C996D457B68AD9403FFF408E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		37421F149E1FC5988446D4A6FAE4EEC9 /* Pods-BartMeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B2A9D42B14FBD6F34EAF892D6830235 /* Pods-BartMeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BD967FF32D22C5FD7F370B26E355648 /* TransitionableTab-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33220366FD5745FA03ED657B09C045B9 /* TransitionableTab-dummy.m */; };
+		41F83BE31E87B51010A2D60F65561864 /* Pods-BartMeUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1942CB175B60BA7EE4A3FD7687529237 /* Pods-BartMeUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		518D9921DB73BD72E9D5228C18A616E3 /* Pods-BartMeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 768F7573C346715075C9B39DA40E1630 /* Pods-BartMeUITests-dummy.m */; };
+		8EC1758E67B79653A6E27CA952337F5F /* LayerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC614C23FF4FDF818F1E0AA2B8A0AFF /* LayerContext.swift */; };
+		C012651521B6A2A038337469B7A9E233 /* TransitionableTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DCB8E34B10A7DBA1897C0CE90591F5 /* TransitionableTab.swift */; };
+		CE15BE373568C8F1DEFA9DCABD954D80 /* CAMediaTimingFunction+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44691EC78677E30AA7C017451E819D07 /* CAMediaTimingFunction+Transition.swift */; };
+		D37CD8C10155ADB267B3E2F29BB7B7ED /* AnimationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1534FD3D762FB7F0416DC5C8DE501 /* AnimationFactory.swift */; };
+		DF736E87834833BAD1CC93387E8AFB0A /* Pods-BartMeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7639DBACD14421D06E804C007AA0E0 /* Pods-BartMeTests-dummy.m */; };
+		E3CDDB8FC4888190993E6A9B2AFB2F1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		FB55B06F9069AA480567956CC928E0A2 /* Pods-BartMe-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6968F196F076DD9F84D2A092D9409A8 /* Pods-BartMe-dummy.m */; };
+		FB56071C30A795111A8A3EAE25F5E045 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66A5894820EC9AB2ABA4D9812DCA80A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91298718C4DFB20BBC23ED3E1739B3DF;
+			remoteInfo = "Pods-BartMe";
+		};
+		7AD2AAA7B1A147030A8A9E5F8F1A3CB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91298718C4DFB20BBC23ED3E1739B3DF;
+			remoteInfo = "Pods-BartMe";
+		};
+		E724919A71D558920D8936C99B7E9667 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0E996FAB9CB69CDF142D1F4AB8C960E;
+			remoteInfo = TransitionableTab;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0581C8453926DFC372CA126EA4C8581C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AFC66838C415727C41490B6AA4E18AC /* Pods-BartMe-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BartMe-frameworks.sh"; sourceTree = "<group>"; };
+		17AC0A56A7FAE6E81B28F518B9CBD194 /* DefineAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefineAnimation.swift; path = Sources/DefineAnimation.swift; sourceTree = "<group>"; };
+		1942CB175B60BA7EE4A3FD7687529237 /* Pods-BartMeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BartMeUITests-umbrella.h"; sourceTree = "<group>"; };
+		19E44E3A7C4DFFE92F32FEC87FEFBC98 /* Pods-BartMe-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BartMe-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1B0CC0B0E26D3526EA353FACA5BE8729 /* Pods-BartMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BartMeTests.release.xcconfig"; sourceTree = "<group>"; };
+		1B2A9D42B14FBD6F34EAF892D6830235 /* Pods-BartMeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BartMeTests-umbrella.h"; sourceTree = "<group>"; };
+		1C6A24DF6586C1D8B53DAE1BF26DC7DB /* TransitionableTab.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TransitionableTab.modulemap; sourceTree = "<group>"; };
+		1DD750B44732C75BC8E9F5197F716283 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2722C24827FE3DCA2A475EBF3DCF2882 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EDDD146063FE0271AEA3033B415EB30 /* Pods-BartMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BartMe.release.xcconfig"; sourceTree = "<group>"; };
+		2F051F4BC71CA8200DA22CC591926CFB /* TransitionableTab.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TransitionableTab.xcconfig; sourceTree = "<group>"; };
+		33220366FD5745FA03ED657B09C045B9 /* TransitionableTab-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TransitionableTab-dummy.m"; sourceTree = "<group>"; };
+		4226BBF3FA92F191BABE240794EBE6D7 /* Pods-BartMeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BartMeTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		44691EC78677E30AA7C017451E819D07 /* CAMediaTimingFunction+Transition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CAMediaTimingFunction+Transition.swift"; path = "Sources/CAMediaTimingFunction+Transition.swift"; sourceTree = "<group>"; };
+		458F955C54FB8685E082C3169FF4DFA1 /* Pods_BartMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BartMeTests.framework; path = "Pods-BartMeTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4BE767EBB51AE62D4AB7AF60031FCA /* Pods-BartMeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BartMeTests.modulemap"; sourceTree = "<group>"; };
+		580FE571201A5503C31451B699B9888A /* TransitionableTab-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionableTab-prefix.pch"; sourceTree = "<group>"; };
+		6E5CCDAFC3D7F8D8DD20C5E658A78FC2 /* Pods-BartMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BartMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		70D0D8766E286A6D5AA47627E6CB2C03 /* Pods-BartMeUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BartMeUITests-resources.sh"; sourceTree = "<group>"; };
+		73CD3AEF3B865CB0631399C51FEFE5A8 /* Pods-BartMe.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BartMe.modulemap"; sourceTree = "<group>"; };
+		768F7573C346715075C9B39DA40E1630 /* Pods-BartMeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BartMeUITests-dummy.m"; sourceTree = "<group>"; };
+		770C507EE33E36C01DC37FFDF75EDC6C /* Pods-BartMeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BartMeUITests-frameworks.sh"; sourceTree = "<group>"; };
+		7F671CF802FF30307E8AC7457C6801D7 /* Pods-BartMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BartMeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		80B26908EAB037415780FB95BB182E92 /* Options.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Options.swift; path = Sources/Options.swift; sourceTree = "<group>"; };
+		89ED366B0B92D7CC017235F87B93EE72 /* Pods-BartMeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BartMeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8AC6E640517397602CE698524144FFBA /* Pods-BartMe-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BartMe-umbrella.h"; sourceTree = "<group>"; };
+		91DF368AD0F2D5F229F53A54A75F7A0F /* Pods-BartMe-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BartMe-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F7639DBACD14421D06E804C007AA0E0 /* Pods-BartMeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BartMeTests-dummy.m"; sourceTree = "<group>"; };
+		A3DCB8E34B10A7DBA1897C0CE90591F5 /* TransitionableTab.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionableTab.swift; path = Sources/TransitionableTab.swift; sourceTree = "<group>"; };
+		AAC73EB2F30B0ADD417D39218C7FB822 /* TransitionableTab-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionableTab-umbrella.h"; sourceTree = "<group>"; };
+		ABB1534FD3D762FB7F0416DC5C8DE501 /* AnimationFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationFactory.swift; path = Sources/AnimationFactory.swift; sourceTree = "<group>"; };
+		B86D94606F9E1F0594FBC8E20990CB79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE36FDA73F42306D144FC84BED743270 /* Pods-BartMeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BartMeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BFE3DACDDA3535C5959825FC0BFDE3FD /* Pods-BartMeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BartMeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C81B7852B65001EAA84C9EE730CF6BCF /* Pods-BartMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BartMe.debug.xcconfig"; sourceTree = "<group>"; };
+		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D98A7E62C4FE60BE6671EBDF972D561A /* Pods_BartMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BartMe.framework; path = "Pods-BartMe.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDC614C23FF4FDF818F1E0AA2B8A0AFF /* LayerContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerContext.swift; path = Sources/LayerContext.swift; sourceTree = "<group>"; };
+		E3565D7CF9D316A9FEE77DD070E8B712 /* Pods-BartMe-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BartMe-acknowledgements.plist"; sourceTree = "<group>"; };
+		E5113DCE51000AD5C60038829188EC61 /* Pods-BartMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BartMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE4CDC8876B3C9843ABBA9A3C3F78BEF /* Pods-BartMeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BartMeUITests.modulemap"; sourceTree = "<group>"; };
+		F470C9C35F19A9C02F4364786B722A37 /* Pods-BartMeTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BartMeTests-resources.sh"; sourceTree = "<group>"; };
+		F618344DA6431D0A86279C2C86E35386 /* TransitionableTab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TransitionableTab.framework; path = TransitionableTab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6968F196F076DD9F84D2A092D9409A8 /* Pods-BartMe-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BartMe-dummy.m"; sourceTree = "<group>"; };
+		FA246B7F00C9A046252BFE893354B340 /* Pods-BartMeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BartMeTests-frameworks.sh"; sourceTree = "<group>"; };
+		FCB03F23C82EB32BFD6303B6FB744A07 /* Pods_BartMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BartMeUITests.framework; path = "Pods-BartMeUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		292B2FF6C402C4D3965456FAB6ECE701 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3CDDB8FC4888190993E6A9B2AFB2F1C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33D4B9FB7A1356E75811A16454C77F0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031F74FFB0C296F3DEB83827EA566C01 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48621E189B41197EC3EB5EF449779C8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32188D71C996D457B68AD9403FFF408E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E760E83A22BD9A3E7D7504EFAB4897F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB56071C30A795111A8A3EAE25F5E045 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07E1240CF14AF647CE9BB4596EDADE82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D98A7E62C4FE60BE6671EBDF972D561A /* Pods_BartMe.framework */,
+				458F955C54FB8685E082C3169FF4DFA1 /* Pods_BartMeTests.framework */,
+				FCB03F23C82EB32BFD6303B6FB744A07 /* Pods_BartMeUITests.framework */,
+				F618344DA6431D0A86279C2C86E35386 /* TransitionableTab.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		449F42DD57E75B642BBAA17FEB3A41A3 /* Pods-BartMe */ = {
+			isa = PBXGroup;
+			children = (
+				2722C24827FE3DCA2A475EBF3DCF2882 /* Info.plist */,
+				73CD3AEF3B865CB0631399C51FEFE5A8 /* Pods-BartMe.modulemap */,
+				19E44E3A7C4DFFE92F32FEC87FEFBC98 /* Pods-BartMe-acknowledgements.markdown */,
+				E3565D7CF9D316A9FEE77DD070E8B712 /* Pods-BartMe-acknowledgements.plist */,
+				F6968F196F076DD9F84D2A092D9409A8 /* Pods-BartMe-dummy.m */,
+				0AFC66838C415727C41490B6AA4E18AC /* Pods-BartMe-frameworks.sh */,
+				91DF368AD0F2D5F229F53A54A75F7A0F /* Pods-BartMe-resources.sh */,
+				8AC6E640517397602CE698524144FFBA /* Pods-BartMe-umbrella.h */,
+				C81B7852B65001EAA84C9EE730CF6BCF /* Pods-BartMe.debug.xcconfig */,
+				2EDDD146063FE0271AEA3033B415EB30 /* Pods-BartMe.release.xcconfig */,
+			);
+			name = "Pods-BartMe";
+			path = "Target Support Files/Pods-BartMe";
+			sourceTree = "<group>";
+		};
+		44D5347904CF754D6785B84253F2574A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		46198C68BC7464DCE405CAC6630F115E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B86D94606F9E1F0594FBC8E20990CB79 /* Info.plist */,
+				1C6A24DF6586C1D8B53DAE1BF26DC7DB /* TransitionableTab.modulemap */,
+				2F051F4BC71CA8200DA22CC591926CFB /* TransitionableTab.xcconfig */,
+				33220366FD5745FA03ED657B09C045B9 /* TransitionableTab-dummy.m */,
+				580FE571201A5503C31451B699B9888A /* TransitionableTab-prefix.pch */,
+				AAC73EB2F30B0ADD417D39218C7FB822 /* TransitionableTab-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TransitionableTab";
+			sourceTree = "<group>";
+		};
+		6744A980F7337195D672A6C6A9AFE64B /* TransitionableTab */ = {
+			isa = PBXGroup;
+			children = (
+				ABB1534FD3D762FB7F0416DC5C8DE501 /* AnimationFactory.swift */,
+				44691EC78677E30AA7C017451E819D07 /* CAMediaTimingFunction+Transition.swift */,
+				17AC0A56A7FAE6E81B28F518B9CBD194 /* DefineAnimation.swift */,
+				DDC614C23FF4FDF818F1E0AA2B8A0AFF /* LayerContext.swift */,
+				80B26908EAB037415780FB95BB182E92 /* Options.swift */,
+				A3DCB8E34B10A7DBA1897C0CE90591F5 /* TransitionableTab.swift */,
+				46198C68BC7464DCE405CAC6630F115E /* Support Files */,
+			);
+			name = TransitionableTab;
+			path = TransitionableTab;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				BF02EAB1565B89729E867E564628A021 /* Pods */,
+				07E1240CF14AF647CE9BB4596EDADE82 /* Products */,
+				E7FCDD36A26A9940381B212BC73CF719 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		88B3FB0B4936CF9401A5F4970AA4C8CF /* Pods-BartMeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1DD750B44732C75BC8E9F5197F716283 /* Info.plist */,
+				EE4CDC8876B3C9843ABBA9A3C3F78BEF /* Pods-BartMeUITests.modulemap */,
+				BFE3DACDDA3535C5959825FC0BFDE3FD /* Pods-BartMeUITests-acknowledgements.markdown */,
+				BE36FDA73F42306D144FC84BED743270 /* Pods-BartMeUITests-acknowledgements.plist */,
+				768F7573C346715075C9B39DA40E1630 /* Pods-BartMeUITests-dummy.m */,
+				770C507EE33E36C01DC37FFDF75EDC6C /* Pods-BartMeUITests-frameworks.sh */,
+				70D0D8766E286A6D5AA47627E6CB2C03 /* Pods-BartMeUITests-resources.sh */,
+				1942CB175B60BA7EE4A3FD7687529237 /* Pods-BartMeUITests-umbrella.h */,
+				6E5CCDAFC3D7F8D8DD20C5E658A78FC2 /* Pods-BartMeUITests.debug.xcconfig */,
+				7F671CF802FF30307E8AC7457C6801D7 /* Pods-BartMeUITests.release.xcconfig */,
+			);
+			name = "Pods-BartMeUITests";
+			path = "Target Support Files/Pods-BartMeUITests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44D5347904CF754D6785B84253F2574A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF02EAB1565B89729E867E564628A021 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6744A980F7337195D672A6C6A9AFE64B /* TransitionableTab */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C2F5EB6A049F3BBA0DB0B804386BFFED /* Pods-BartMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				0581C8453926DFC372CA126EA4C8581C /* Info.plist */,
+				4C4BE767EBB51AE62D4AB7AF60031FCA /* Pods-BartMeTests.modulemap */,
+				89ED366B0B92D7CC017235F87B93EE72 /* Pods-BartMeTests-acknowledgements.markdown */,
+				4226BBF3FA92F191BABE240794EBE6D7 /* Pods-BartMeTests-acknowledgements.plist */,
+				9F7639DBACD14421D06E804C007AA0E0 /* Pods-BartMeTests-dummy.m */,
+				FA246B7F00C9A046252BFE893354B340 /* Pods-BartMeTests-frameworks.sh */,
+				F470C9C35F19A9C02F4364786B722A37 /* Pods-BartMeTests-resources.sh */,
+				1B2A9D42B14FBD6F34EAF892D6830235 /* Pods-BartMeTests-umbrella.h */,
+				E5113DCE51000AD5C60038829188EC61 /* Pods-BartMeTests.debug.xcconfig */,
+				1B0CC0B0E26D3526EA353FACA5BE8729 /* Pods-BartMeTests.release.xcconfig */,
+			);
+			name = "Pods-BartMeTests";
+			path = "Target Support Files/Pods-BartMeTests";
+			sourceTree = "<group>";
+		};
+		E7FCDD36A26A9940381B212BC73CF719 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				449F42DD57E75B642BBAA17FEB3A41A3 /* Pods-BartMe */,
+				C2F5EB6A049F3BBA0DB0B804386BFFED /* Pods-BartMeTests */,
+				88B3FB0B4936CF9401A5F4970AA4C8CF /* Pods-BartMeUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		08DCA30D1F253010ED07C4452C27162D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BC7461573D48AD3DF2DB69B149EA1A5 /* TransitionableTab-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CFFB72945F24A8DF9019C279BC6102A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1562D09E6437F8440E557DFEE1638E10 /* Pods-BartMe-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BF5A8D74B11079C5A69395A1F5DDC8F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41F83BE31E87B51010A2D60F65561864 /* Pods-BartMeUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA1E96B31012AD3BC20172CE0538E3DA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37421F149E1FC5988446D4A6FAE4EEC9 /* Pods-BartMeTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		13DF0CED36AC5FF551DD3D61462D9E5A /* Pods-BartMeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C64689B84082A82FE3CB3C155C04997F /* Build configuration list for PBXNativeTarget "Pods-BartMeUITests" */;
+			buildPhases = (
+				6BF5A8D74B11079C5A69395A1F5DDC8F /* Headers */,
+				4CCC413D17D13E51693B50860ACDE6BE /* Sources */,
+				292B2FF6C402C4D3965456FAB6ECE701 /* Frameworks */,
+				161B351D90F24C971C7F035F5C7AADAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E899C63D7BB9D48B3C9B9EB841A469FC /* PBXTargetDependency */,
+			);
+			name = "Pods-BartMeUITests";
+			productName = "Pods-BartMeUITests";
+			productReference = FCB03F23C82EB32BFD6303B6FB744A07 /* Pods_BartMeUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		91298718C4DFB20BBC23ED3E1739B3DF /* Pods-BartMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D1FF8D246ACEC5C49AEBC2C3179C695 /* Build configuration list for PBXNativeTarget "Pods-BartMe" */;
+			buildPhases = (
+				3CFFB72945F24A8DF9019C279BC6102A /* Headers */,
+				9DD73A5A0B37AB98C626E2239CA952C8 /* Sources */,
+				48621E189B41197EC3EB5EF449779C8E /* Frameworks */,
+				9DE7D4033851227DFB4085F38A56F913 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE95EBE162A4E49BE6567A0BCD93DCC4 /* PBXTargetDependency */,
+			);
+			name = "Pods-BartMe";
+			productName = "Pods-BartMe";
+			productReference = D98A7E62C4FE60BE6671EBDF972D561A /* Pods_BartMe.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C0E996FAB9CB69CDF142D1F4AB8C960E /* TransitionableTab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDA314711A728213F30E12B4F7118C75 /* Build configuration list for PBXNativeTarget "TransitionableTab" */;
+			buildPhases = (
+				08DCA30D1F253010ED07C4452C27162D /* Headers */,
+				D36C0A62ACB579B918C5F6A0BBFA8D92 /* Sources */,
+				E760E83A22BD9A3E7D7504EFAB4897F6 /* Frameworks */,
+				DD3D3264A3A7A6B96D84E784E1621281 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TransitionableTab;
+			productName = TransitionableTab;
+			productReference = F618344DA6431D0A86279C2C86E35386 /* TransitionableTab.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C1A3C24C18E65C4A1C7FD9EDC4E70C05 /* Pods-BartMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A48FA841678A40AFA67AECD930CC02E /* Build configuration list for PBXNativeTarget "Pods-BartMeTests" */;
+			buildPhases = (
+				FA1E96B31012AD3BC20172CE0538E3DA /* Headers */,
+				DAC1BE64EB6EA69C7C5D97D599B43988 /* Sources */,
+				33D4B9FB7A1356E75811A16454C77F0C /* Frameworks */,
+				758859DCD1D262E085D2C721A04C0A41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F31EDE31E62C86EF00714AF5870A128 /* PBXTargetDependency */,
+			);
+			name = "Pods-BartMeTests";
+			productName = "Pods-BartMeTests";
+			productReference = 458F955C54FB8685E082C3169FF4DFA1 /* Pods_BartMeTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 07E1240CF14AF647CE9BB4596EDADE82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91298718C4DFB20BBC23ED3E1739B3DF /* Pods-BartMe */,
+				C1A3C24C18E65C4A1C7FD9EDC4E70C05 /* Pods-BartMeTests */,
+				13DF0CED36AC5FF551DD3D61462D9E5A /* Pods-BartMeUITests */,
+				C0E996FAB9CB69CDF142D1F4AB8C960E /* TransitionableTab */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		161B351D90F24C971C7F035F5C7AADAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		758859DCD1D262E085D2C721A04C0A41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE7D4033851227DFB4085F38A56F913 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD3D3264A3A7A6B96D84E784E1621281 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CCC413D17D13E51693B50860ACDE6BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				518D9921DB73BD72E9D5228C18A616E3 /* Pods-BartMeUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD73A5A0B37AB98C626E2239CA952C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB55B06F9069AA480567956CC928E0A2 /* Pods-BartMe-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D36C0A62ACB579B918C5F6A0BBFA8D92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D37CD8C10155ADB267B3E2F29BB7B7ED /* AnimationFactory.swift in Sources */,
+				CE15BE373568C8F1DEFA9DCABD954D80 /* CAMediaTimingFunction+Transition.swift in Sources */,
+				25312D037E5E818AADCE3B926F3355CB /* DefineAnimation.swift in Sources */,
+				8EC1758E67B79653A6E27CA952337F5F /* LayerContext.swift in Sources */,
+				14340903334528B013C1A64CA4D3C699 /* Options.swift in Sources */,
+				3BD967FF32D22C5FD7F370B26E355648 /* TransitionableTab-dummy.m in Sources */,
+				C012651521B6A2A038337469B7A9E233 /* TransitionableTab.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC1BE64EB6EA69C7C5D97D599B43988 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF736E87834833BAD1CC93387E8AFB0A /* Pods-BartMeTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F31EDE31E62C86EF00714AF5870A128 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BartMe";
+			target = 91298718C4DFB20BBC23ED3E1739B3DF /* Pods-BartMe */;
+			targetProxy = 66A5894820EC9AB2ABA4D9812DCA80A4 /* PBXContainerItemProxy */;
+		};
+		E899C63D7BB9D48B3C9B9EB841A469FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BartMe";
+			target = 91298718C4DFB20BBC23ED3E1739B3DF /* Pods-BartMe */;
+			targetProxy = 7AD2AAA7B1A147030A8A9E5F8F1A3CB4 /* PBXContainerItemProxy */;
+		};
+		EE95EBE162A4E49BE6567A0BCD93DCC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TransitionableTab;
+			target = C0E996FAB9CB69CDF142D1F4AB8C960E /* TransitionableTab */;
+			targetProxy = E724919A71D558920D8936C99B7E9667 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		097925C9397DC04C6431142272FC1B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		4B2792C9EE122B9C58F06115A1A68DF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F671CF802FF30307E8AC7457C6801D7 /* Pods-BartMeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BartMeUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BartMeUITests/Pods-BartMeUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5592B1650C12137B6D765678A9F266AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EDDD146063FE0271AEA3033B415EB30 /* Pods-BartMe.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BartMe/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BartMe/Pods-BartMe.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		62E6E23B06363D341A767A619B71FDE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C81B7852B65001EAA84C9EE730CF6BCF /* Pods-BartMe.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BartMe/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BartMe/Pods-BartMe.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6E329CE9C184C7B16A920E893C7EE6EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F051F4BC71CA8200DA22CC591926CFB /* TransitionableTab.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TransitionableTab/TransitionableTab-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TransitionableTab/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TransitionableTab/TransitionableTab.modulemap";
+				PRODUCT_MODULE_NAME = TransitionableTab;
+				PRODUCT_NAME = TransitionableTab;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7D279A1BC1A699808A4158D20301FFD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		88F6F7598771DF14D4DE79547DB9B250 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F051F4BC71CA8200DA22CC591926CFB /* TransitionableTab.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TransitionableTab/TransitionableTab-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TransitionableTab/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TransitionableTab/TransitionableTab.modulemap";
+				PRODUCT_MODULE_NAME = TransitionableTab;
+				PRODUCT_NAME = TransitionableTab;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C3B22D6AC4AEA4B8CD84885CBD41B6E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B0CC0B0E26D3526EA353FACA5BE8729 /* Pods-BartMeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BartMeTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BartMeTests/Pods-BartMeTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CF1FE21856127018397F71A129778100 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5113DCE51000AD5C60038829188EC61 /* Pods-BartMeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BartMeTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BartMeTests/Pods-BartMeTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EE34AFDA00B08428A6A2CF35ACF669E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E5CCDAFC3D7F8D8DD20C5E658A78FC2 /* Pods-BartMeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BartMeUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BartMeUITests/Pods-BartMeUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D1FF8D246ACEC5C49AEBC2C3179C695 /* Build configuration list for PBXNativeTarget "Pods-BartMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62E6E23B06363D341A767A619B71FDE0 /* Debug */,
+				5592B1650C12137B6D765678A9F266AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D279A1BC1A699808A4158D20301FFD7 /* Debug */,
+				097925C9397DC04C6431142272FC1B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A48FA841678A40AFA67AECD930CC02E /* Build configuration list for PBXNativeTarget "Pods-BartMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1FE21856127018397F71A129778100 /* Debug */,
+				C3B22D6AC4AEA4B8CD84885CBD41B6E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C64689B84082A82FE3CB3C155C04997F /* Build configuration list for PBXNativeTarget "Pods-BartMeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE34AFDA00B08428A6A2CF35ACF669E5 /* Debug */,
+				4B2792C9EE122B9C58F06115A1A68DF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDA314711A728213F30E12B4F7118C75 /* Build configuration list for PBXNativeTarget "TransitionableTab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E329CE9C184C7B16A920E893C7EE6EB /* Debug */,
+				88F6F7598771DF14D4DE79547DB9B250 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
