@@ -48,7 +48,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         station1TextField.textAlignment = .center
         station1TextField.delegate = self
         station1TextField.translatesAutoresizingMaskIntoConstraints = false
-        station1TextField.placeholder = "Bart station 1"
+        station1TextField.attributedPlaceholder = NSAttributedString(string: "BART station 1",
+                                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.blue])
+
         station1TextField.layer.cornerRadius = 0.5
         station1TextField.layer.borderWidth = 0.5
         station1TextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
@@ -62,7 +64,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         station2TextField.textAlignment = .center
         station2TextField.delegate = self
         station2TextField.translatesAutoresizingMaskIntoConstraints = false
-        station2TextField.placeholder = "Bart station 2"
+        station2TextField.attributedPlaceholder = NSAttributedString(string: "BART station 2",
+                                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.blue])
         station2TextField.layer.cornerRadius = 0.5
         station2TextField.layer.borderWidth = 0.5
         station2TextField.topAnchor.constraint(equalTo: station1TextField.bottomAnchor, constant: 30).isActive = true
@@ -151,13 +154,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     // MARK: - UITextfielDelegate methods
-    
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
         if textField.tag == 0 {
+            station1TextField.attributedPlaceholder = NSAttributedString(string: "BART station 1",
+                                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.orange])
+
             station1TextFieldSelected = true
         }
         else {
+            station2TextField.attributedPlaceholder = NSAttributedString(string: "BART station 2",
+                                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.orange])
+
             station1TextFieldSelected = false
         }
     }
