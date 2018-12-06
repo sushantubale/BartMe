@@ -48,11 +48,10 @@ class BartAPI {
             }.resume()
     }
     
-    static func getRoute(_ station1: String?,_ station2: String?, completionHandler: @escaping (RouteModel) -> Void) {
+    static func specificRoute(_ station1: String?,_ station2: String?, completionHandler: @escaping (SpeceficRouteModel) -> Void) {
     
         let routeURL = URL(string: "http://api.bart.gov/api/sched.aspx?cmd=arrive&orig=\(station1 ?? "12TH")&dest=\(station2 ?? "24TH")&date=now&key=MW9S-E7SL-26DU-VV8V&b=2&a=2&l=1&json=y")
         
-        var routeModel = RouteModel()
         
         URLSession.shared.dataTask(with: routeURL!) { (data, response, error) in
             if error == nil {
@@ -63,20 +62,11 @@ class BartAPI {
                             print("error trying to convert data to JSON")
                             return
                     }
-                    print("todo = \(todo)")
-                    let root = todo["root"] as? [String: Any]
-                    let schedule = root?["schedule"] as? [String: Any]
-                    let request = schedule?["request"] as? [String: Any]
-                    let trip = request?["trip"] as? [[String: Any]]
 
-                    for (key, value) in (trip?.enumerated())! {
-                        routeModel.destinationTimes?.append(value["@destTimeMin"] as! String)
-                        routeModel.originTimes?.append(value["@origTimeMin"] as! String)
-                        routeModel.destination?.append(value["@destination"] as! String)
-                        routeModel.origin?.append(value["@origin"] as! String)
-                        routeModel.tripTime?.append(value["@tripTime"] as! String)
+                    let routeModel = BartAPI.getSpeceficRouteInfo(todo)
+                    if let routeModel = routeModel {
+                        completionHandler(routeModel)
                     }
-                    completionHandler(routeModel)
                 } catch  {
                     print("error trying to convert data to JSON")
                     return
@@ -85,5 +75,61 @@ class BartAPI {
             else { print("no data") }
             }.resume()
 
+    }
+    
+    private static func getSpeceficRouteInfo(_ todo: [String : Any]?) -> SpeceficRouteModel? {
+        
+        var routeModel = SpeceficRouteModel()
+        
+        guard let todo = todo else {return nil}
+        let root = todo["root"] as? [String: Any]
+        let schedule = root?["schedule"] as? [String: Any]
+        let request = schedule?["request"] as? [String: Any]
+        let trip = request?["trip"] as? [[String: Any]]
+        
+        for (key, value) in (trip?.enumerated())! {
+            routeModel.destinationTimes.append(value["@destTimeMin"] as! String)
+            routeModel.originTimes?.append(value["@origTimeMin"] as! String)
+            routeModel.destination?.append(value["@destination"] as! String)
+            routeModel.origin?.append(value["@origin"] as! String)
+            routeModel.tripTime?.append(value["@tripTime"] as! String)
+        }
+        
+        return routeModel
+    }
+    
+    
+    static func singleRoute(_ station: String?, completionHandler: @escaping ([Etd]?) -> Void) {
+        
+        let routeURL = URL(string: "http://api.bart.gov/api/etd.aspx?cmd=etd&orig=\(station ?? "12TH")&key=MW9S-E7SL-26DU-VV8V&json=y")
+        
+
+        URLSession.shared.dataTask(with: routeURL!) { (data, response, error) in
+            if error == nil {
+                var etds: [Etd]?
+                if let data = data {
+                    let model = try? JSONDecoder().decode(DummyResponse.self, from: data)
+                    
+                    print(model?.root.stations[0].abbr)
+                    //print(res)
+                    for station in (model?.root.stations)! {
+                        
+                        print("ABBR: \(station.abbr)")
+                        print("Name: \(station.name)")
+                        print("Etds: \(station.etds)")
+                        etds = station.etds
+                        print(etds)
+                        print("Etds: \(station.etds[0].estimates[0].minutes)")
+                    }
+
+                    completionHandler(etds)
+                }
+                else {
+                    completionHandler(nil)
+                }
+            }
+            else { print("no data") }
+            }.resume()
+        
     }
 }

@@ -17,8 +17,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var station1TextFieldSelected: Bool?
     var station1NameForRoute: String?
     var station2NameForRoute: String?
-    
-    
+    var progressIndicator: UIActivityIndicatorView {
+    let progressInd = UIActivityIndicatorView()
+        progressInd.isHidden = true
+        return progressInd
+    }
     @IBOutlet weak var stationTableView: UITableView!
     
     override func viewDidLoad() {
@@ -83,7 +86,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @objc func getRoute() {
         
-        if (station1TextField.text?.isEmpty)! || (station2TextField.text?.isEmpty)! {
+        guard let testField1 = station1TextField.text, let textField2 = station2TextField.text else {return}
+        if (testField1.isEmpty) || (testField1.isEmpty) {
             let alert = UIAlertController(title: "Alert!!!!", message: "Please select a valid BART station for the routes.", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
                 switch action.style{
@@ -103,21 +107,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         }
         
-        BartAPI.getRoute(self.station1NameForRoute, self.station2NameForRoute) { [weak self] (routeModel) in
+        BartAPI.specificRoute(self.station1NameForRoute, self.station2NameForRoute) { [weak self] (routeModel) in
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
             vc.destinationTimes = routeModel.destinationTimes
-            vc.destination = routeModel.destination
-            vc.originTimes = routeModel.originTimes
-            vc.origin = routeModel.origin
-            vc.tripTime = routeModel.tripTime
             DispatchQueue.main.async {
                 self?.present(vc, animated: true, completion: nil)
-
             }
-
-            
         }
 
     }
