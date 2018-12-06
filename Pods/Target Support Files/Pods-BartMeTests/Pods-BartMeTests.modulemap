@@ -1,0 +1,6 @@
+framework module Pods_BartMeTests {
+  umbrella header "Pods-BartMeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		026B06F03B4A746FC8E0C474 /* Pods_BartMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C79CA3E330EDBCD0689F98 /* Pods_BartMe.framework */; };
 		0A0E23FA21883042006F4328 /* BartAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E23F921883042006F4328 /* BartAPI.swift */; };
 		0A6F99EA2195033200AF0FA1 /* GetAllRoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F99E92195033200AF0FA1 /* GetAllRoutesViewController.swift */; };
 		0A6F99EB2195033200AF0FA1 /* GetAllRoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F99E92195033200AF0FA1 /* GetAllRoutesViewController.swift */; };
 		0A6F99EC2195033200AF0FA1 /* GetAllRoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F99E92195033200AF0FA1 /* GetAllRoutesViewController.swift */; };
+		0A833AB321B9A50B00247FD5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A833AB221B9A50B00247FD5 /* TabBarViewController.swift */; };
+		0A833AB521B9A5A300247FD5 /* TransitionableTab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A833AB421B9A5A300247FD5 /* TransitionableTab.framework */; };
 		0AFF5494218810AB0025A424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFF5493218810AB0025A424 /* AppDelegate.swift */; };
 		0AFF5496218810AB0025A424 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFF5495218810AB0025A424 /* ViewController.swift */; };
 		0AFF5499218810AB0025A424 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFF5497218810AB0025A424 /* Main.storyboard */; };
@@ -29,6 +32,8 @@
 		254828382191ED3D0062A0A3 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254828362191ED3D0062A0A3 /* UIHelper.swift */; };
 		254828392191ED3D0062A0A3 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254828362191ED3D0062A0A3 /* UIHelper.swift */; };
 		25A4C035218A897E00FD3396 /* BartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4C034218A897E00FD3396 /* BartModel.swift */; };
+		9256F5B265E66F9493D106A9 /* Pods_BartMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F6B66E9223593F2EAB8408 /* Pods_BartMeUITests.framework */; };
+		F2556B57D3BF82397F091282 /* Pods_BartMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4938C58F77B37019A8B8116 /* Pods_BartMeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,8 @@
 /* Begin PBXFileReference section */
 		0A0E23F921883042006F4328 /* BartAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartAPI.swift; sourceTree = "<group>"; };
 		0A6F99E92195033200AF0FA1 /* GetAllRoutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllRoutesViewController.swift; sourceTree = "<group>"; };
+		0A833AB221B9A50B00247FD5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		0A833AB421B9A5A300247FD5 /* TransitionableTab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TransitionableTab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFF5490218810AB0025A424 /* BartMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BartMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFF5493218810AB0025A424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AFF5495218810AB0025A424 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,10 +72,19 @@
 		0AFF54B2218810D10025A424 /* BartMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BartMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFF54B6218810D10025A424 /* BartMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartMeUITests.swift; sourceTree = "<group>"; };
 		0AFF54B8218810D10025A424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		238FD08BCF82B56D08CB08D4 /* Pods-BartMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartMeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BartMeUITests/Pods-BartMeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2548282D218F93D30062A0A3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		25482831218F99E40062A0A3 /* RouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteModel.swift; sourceTree = "<group>"; };
 		254828362191ED3D0062A0A3 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		25A4C034218A897E00FD3396 /* BartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartModel.swift; sourceTree = "<group>"; };
+		71F6B66E9223593F2EAB8408 /* Pods_BartMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BartMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7487EA3A70DA09BCFBB892E3 /* Pods-BartMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BartMe/Pods-BartMe.debug.xcconfig"; sourceTree = "<group>"; };
+		B6D4A0A90E0469FE9EB71986 /* Pods-BartMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BartMeTests/Pods-BartMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B9EBF71F0EC48333C683C870 /* Pods-BartMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-BartMe/Pods-BartMe.release.xcconfig"; sourceTree = "<group>"; };
+		C4938C58F77B37019A8B8116 /* Pods_BartMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BartMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C99E8C223FC4290631D76C94 /* Pods-BartMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BartMeTests/Pods-BartMeTests.release.xcconfig"; sourceTree = "<group>"; };
+		D1C79CA3E330EDBCD0689F98 /* Pods_BartMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BartMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5D80A8008F41B2964D14602 /* Pods-BartMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartMeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BartMeUITests/Pods-BartMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A833AB521B9A5A300247FD5 /* TransitionableTab.framework in Frameworks */,
+				026B06F03B4A746FC8E0C474 /* Pods_BartMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2556B57D3BF82397F091282 /* Pods_BartMeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9256F5B265E66F9493D106A9 /* Pods_BartMeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +131,8 @@
 				0AFF54AA218810D10025A424 /* BartMeTests */,
 				0AFF54B5218810D10025A424 /* BartMeUITests */,
 				0AFF5491218810AB0025A424 /* Products */,
+				DC1E4FE67E615023D2182B58 /* Pods */,
+				DDE20944AF1336B8203FA5F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +184,7 @@
 		2548282A218F93A10062A0A3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A833AB221B9A50B00247FD5 /* TabBarViewController.swift */,
 				0AFF5495218810AB0025A424 /* ViewController.swift */,
 				2548282D218F93D30062A0A3 /* DetailViewController.swift */,
 				0A6F99E92195033200AF0FA1 /* GetAllRoutesViewController.swift */,
@@ -202,6 +225,30 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DC1E4FE67E615023D2182B58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7487EA3A70DA09BCFBB892E3 /* Pods-BartMe.debug.xcconfig */,
+				B9EBF71F0EC48333C683C870 /* Pods-BartMe.release.xcconfig */,
+				B6D4A0A90E0469FE9EB71986 /* Pods-BartMeTests.debug.xcconfig */,
+				C99E8C223FC4290631D76C94 /* Pods-BartMeTests.release.xcconfig */,
+				F5D80A8008F41B2964D14602 /* Pods-BartMeUITests.debug.xcconfig */,
+				238FD08BCF82B56D08CB08D4 /* Pods-BartMeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DDE20944AF1336B8203FA5F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A833AB421B9A5A300247FD5 /* TransitionableTab.framework */,
+				D1C79CA3E330EDBCD0689F98 /* Pods_BartMe.framework */,
+				C4938C58F77B37019A8B8116 /* Pods_BartMeTests.framework */,
+				71F6B66E9223593F2EAB8408 /* Pods_BartMeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,9 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AFF54BB218810D10025A424 /* Build configuration list for PBXNativeTarget "BartMe" */;
 			buildPhases = (
+				F49A356F91FCC6038431A4A2 /* [CP] Check Pods Manifest.lock */,
 				0AFF548C218810AB0025A424 /* Sources */,
 				0AFF548D218810AB0025A424 /* Frameworks */,
 				0AFF548E218810AB0025A424 /* Resources */,
+				AB4A9E0087D9E0F4582A13FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,6 +275,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AFF54BE218810D10025A424 /* Build configuration list for PBXNativeTarget "BartMeTests" */;
 			buildPhases = (
+				17A577FC1CC28AFBCA4FFB18 /* [CP] Check Pods Manifest.lock */,
 				0AFF54A3218810D10025A424 /* Sources */,
 				0AFF54A4218810D10025A424 /* Frameworks */,
 				0AFF54A5218810D10025A424 /* Resources */,
@@ -244,6 +294,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AFF54C1218810D10025A424 /* Build configuration list for PBXNativeTarget "BartMeUITests" */;
 			buildPhases = (
+				7FE96DB1355875CC711D8C21 /* [CP] Check Pods Manifest.lock */,
 				0AFF54AE218810D10025A424 /* Sources */,
 				0AFF54AF218810D10025A424 /* Frameworks */,
 				0AFF54B0218810D10025A424 /* Resources */,
@@ -328,6 +379,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		17A577FC1CC28AFBCA4FFB18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BartMeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FE96DB1355875CC711D8C21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BartMeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB4A9E0087D9E0F4582A13FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BartMe/Pods-BartMe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TransitionableTab/TransitionableTab.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionableTab.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BartMe/Pods-BartMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F49A356F91FCC6038431A4A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BartMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0AFF548C218810AB0025A424 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -341,6 +483,7 @@
 				0AFF549C218810AB0025A424 /* BartMe.xcdatamodeld in Sources */,
 				25482832218F99E40062A0A3 /* RouteModel.swift in Sources */,
 				0A0E23FA21883042006F4328 /* BartAPI.swift in Sources */,
+				0A833AB321B9A50B00247FD5 /* TabBarViewController.swift in Sources */,
 				254828372191ED3D0062A0A3 /* UIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +663,7 @@
 		};
 		0AFF54BC218810D10025A424 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7487EA3A70DA09BCFBB892E3 /* Pods-BartMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -538,6 +682,7 @@
 		};
 		0AFF54BD218810D10025A424 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9EBF71F0EC48333C683C870 /* Pods-BartMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -556,6 +701,7 @@
 		};
 		0AFF54BF218810D10025A424 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6D4A0A90E0469FE9EB71986 /* Pods-BartMeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -577,6 +723,7 @@
 		};
 		0AFF54C0218810D10025A424 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C99E8C223FC4290631D76C94 /* Pods-BartMeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -598,6 +745,7 @@
 		};
 		0AFF54C2218810D10025A424 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5D80A8008F41B2964D14602 /* Pods-BartMeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -618,6 +766,7 @@
 		};
 		0AFF54C3218810D10025A424 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 238FD08BCF82B56D08CB08D4 /* Pods-BartMeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
