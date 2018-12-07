@@ -41,7 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func renderUI() {
         
-        station1TextField.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
+        station1TextField.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 400)
         view.addSubview(station1TextField)
         station1TextField.addTarget(self, action: #selector(stationTextfieldAction), for: UIControlEvents.touchDown)
         station1TextField.tag = 0
@@ -49,38 +49,41 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         station1TextField.delegate = self
         station1TextField.translatesAutoresizingMaskIntoConstraints = false
         station1TextField.attributedPlaceholder = NSAttributedString(string: "BART station 1",
-                                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.blue])
+                                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
 
         station1TextField.layer.cornerRadius = 0.5
         station1TextField.layer.borderWidth = 0.5
-        station1TextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        station1TextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 300).isActive = true
         station1TextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
         station1TextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
-        
+        station1TextField.borderStyle = UITextBorderStyle.roundedRect
+
         station2TextField.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
         view.addSubview(station2TextField)
+        
         station2TextField.addTarget(self, action: #selector(stationTextfieldAction), for: UIControlEvents.touchDown)
         station2TextField.tag = 1
         station2TextField.textAlignment = .center
         station2TextField.delegate = self
         station2TextField.translatesAutoresizingMaskIntoConstraints = false
         station2TextField.attributedPlaceholder = NSAttributedString(string: "BART station 2",
-                                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.blue])
+                                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         station2TextField.layer.cornerRadius = 0.5
         station2TextField.layer.borderWidth = 0.5
         station2TextField.topAnchor.constraint(equalTo: station1TextField.bottomAnchor, constant: 30).isActive = true
         station2TextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
         station2TextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
-        
-        let findButton = SimpleButton(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 60))
+        station2TextField.borderStyle = UITextBorderStyle.roundedRect
+
+        let findButton = SimpleButton(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 200))
         view.addSubview(findButton)
         findButton.setBorderWidth(2.0, for: .normal)
         findButton.setBorderColor(.black, for: .normal)
         findButton.addTarget(self, action: #selector(getRoute), for: UIControlEvents.touchDown)
         findButton.translatesAutoresizingMaskIntoConstraints = false
         findButton.topAnchor.constraint(equalTo: station2TextField.topAnchor, constant: 100).isActive = true
-        findButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
-        findButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
+        findButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60).isActive = true
+        findButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60).isActive = true
     }
     
     @objc func getRoute() {
@@ -130,6 +133,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return
             
         }
+        
         BartAPI.specificRoute(self.station1NameForRoute, self.station2NameForRoute) { [weak self] (routeModel) in
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController

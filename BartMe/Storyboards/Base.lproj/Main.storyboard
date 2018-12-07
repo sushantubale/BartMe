@@ -18,21 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7o-qt-dvE">
-                                <rect key="frame" x="16" y="199" width="343" height="30"/>
-                                <state key="normal" title="Get all routes"/>
-                                <connections>
-                                    <action selector="getAllRoutesButttonClicked:" destination="EPN-1q-bcX" eventType="touchUpInside" id="yaH-RE-iYQ"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Get route from...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZFs-oT-LEF">
-                                <rect key="frame" x="16" y="96" width="343" height="30"/>
+                                <rect key="frame" x="16" y="320" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IyN-P0-dem">
-                                <rect key="frame" x="16" y="384" width="343" height="274"/>
+                                <rect key="frame" x="16" y="354" width="343" height="274"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="274" id="rH5-rC-iWW"/>
@@ -68,25 +61,30 @@
                                     <outlet property="delegate" destination="EPN-1q-bcX" id="pDi-Lz-Ezs"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="train" translatesAutoresizingMaskIntoConstraints="NO" id="fkZ-Xp-ryo">
+                                <rect key="frame" x="68" y="88" width="239" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="fRb-oM-fFJ"/>
+                                    <constraint firstAttribute="height" constant="128" id="wMt-gL-7lT"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IyN-P0-dem" firstAttribute="leading" secondItem="Y7o-qt-dvE" secondAttribute="trailing" constant="-343" id="1Ws-AL-b65"/>
+                            <constraint firstItem="fkZ-Xp-ryo" firstAttribute="leading" secondItem="ykP-qz-3No" secondAttribute="leading" constant="68" id="Ffv-rH-qbk"/>
                             <constraint firstItem="ykP-qz-3No" firstAttribute="trailing" secondItem="IyN-P0-dem" secondAttribute="trailing" constant="16" id="GFg-jh-tmO"/>
                             <constraint firstItem="IyN-P0-dem" firstAttribute="leading" secondItem="ykP-qz-3No" secondAttribute="leading" constant="16" id="KVk-ye-Y5a"/>
-                            <constraint firstItem="IyN-P0-dem" firstAttribute="bottom" secondItem="ykP-qz-3No" secondAttribute="bottom" constant="40" id="PPU-DH-cDY"/>
-                            <constraint firstItem="ZFs-oT-LEF" firstAttribute="top" secondItem="ykP-qz-3No" secondAttribute="top" constant="76" id="W6C-Oy-CA6"/>
-                            <constraint firstItem="Y7o-qt-dvE" firstAttribute="top" secondItem="ZFs-oT-LEF" secondAttribute="bottom" constant="73" id="blK-BN-t48"/>
+                            <constraint firstItem="IyN-P0-dem" firstAttribute="bottom" secondItem="ykP-qz-3No" secondAttribute="bottom" constant="10" id="PPU-DH-cDY"/>
+                            <constraint firstItem="ykP-qz-3No" firstAttribute="trailing" secondItem="fkZ-Xp-ryo" secondAttribute="trailing" constant="68" id="XS9-hO-Ilm"/>
                             <constraint firstItem="ykP-qz-3No" firstAttribute="trailing" secondItem="ZFs-oT-LEF" secondAttribute="trailing" constant="16" id="cs4-Ff-Q0K"/>
-                            <constraint firstItem="ykP-qz-3No" firstAttribute="trailing" secondItem="Y7o-qt-dvE" secondAttribute="trailing" constant="16" id="nvm-iS-isK"/>
-                            <constraint firstItem="Y7o-qt-dvE" firstAttribute="leading" secondItem="ykP-qz-3No" secondAttribute="leading" constant="16" id="nws-uM-n98"/>
+                            <constraint firstItem="fkZ-Xp-ryo" firstAttribute="top" secondItem="ykP-qz-3No" secondAttribute="top" constant="68" id="dTz-gS-CeU"/>
+                            <constraint firstItem="ZFs-oT-LEF" firstAttribute="top" secondItem="ykP-qz-3No" secondAttribute="top" constant="300" id="pj0-U6-XhU"/>
                             <constraint firstItem="ZFs-oT-LEF" firstAttribute="leading" secondItem="ykP-qz-3No" secondAttribute="leading" constant="16" id="t8u-zI-Fd5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ykP-qz-3No"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="All Routes" id="cH1-ht-jsX"/>
+                    <tabBarItem key="tabBarItem" title="All Routes" image="multiple_train" id="cH1-ht-jsX"/>
                     <connections>
-                        <outlet property="getAllrouteButton" destination="Y7o-qt-dvE" id="0a3-TJ-kyY"/>
                         <outlet property="getAllrouteTextfield" destination="ZFs-oT-LEF" id="sBz-2J-LGc"/>
                         <outlet property="stationListTableView" destination="IyN-P0-dem" id="65n-Ts-2Wp"/>
                     </connections>
@@ -140,16 +138,27 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Tn1-4S-4YT"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="train" translatesAutoresizingMaskIntoConstraints="NO" id="C7M-yF-x5U">
+                                <rect key="frame" x="68" y="88" width="239" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="xRl-mi-e1f"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Zgx-fh-RoS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="280" id="GTA-f4-sPp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C7M-yF-x5U" secondAttribute="trailing" constant="68" id="EP7-Dg-ukz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zgx-fh-RoS" secondAttribute="trailing" constant="16" id="bnJ-y8-GgP"/>
+                            <constraint firstItem="C7M-yF-x5U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="jd1-ot-8GQ"/>
+                            <constraint firstItem="C7M-yF-x5U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="qXI-TI-2LA"/>
                             <constraint firstItem="Zgx-fh-RoS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tyC-3g-ove"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zgx-fh-RoS" secondAttribute="bottom" constant="118" id="xgO-dT-Tfg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Specific route" image="single_train" id="GaS-2E-JCU"/>
+                    <tabBarItem key="tabBarItem" title="Specific route" image="single_train" id="GaS-2E-JCU">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="2" vertical="10"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="stationTableView" destination="Zgx-fh-RoS" id="S4F-Tz-WjK"/>
                     </connections>
@@ -250,6 +259,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="multiple_train" width="30" height="30"/>
         <image name="single_train" width="30" height="30"/>
+        <image name="train" width="527" height="217"/>
     </resources>
 </document>

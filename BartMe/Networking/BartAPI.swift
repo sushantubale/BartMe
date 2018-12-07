@@ -86,8 +86,8 @@ class BartAPI {
         let schedule = root?["schedule"] as? [String: Any]
         let request = schedule?["request"] as? [String: Any]
         let trip = request?["trip"] as? [[String: Any]]
-        
-        for (key, value) in (trip?.enumerated())! {
+
+        for (_, value) in (trip?.enumerated())! {
             routeModel.destinationTimes.append(value["@destTimeMin"] as! String)
             routeModel.originTimes?.append(value["@origTimeMin"] as! String)
             routeModel.destination?.append(value["@destination"] as! String)
