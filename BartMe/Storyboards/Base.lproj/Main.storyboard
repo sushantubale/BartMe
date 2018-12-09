@@ -176,10 +176,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="smX-tH-E83">
-                                <rect key="frame" x="0.0" y="199" width="375" height="468"/>
+                                <rect key="frame" x="0.0" y="60" width="375" height="457"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="468" id="mpl-Jc-sGc"/>
+                                    <constraint firstAttribute="height" constant="457" id="mpl-Jc-sGc"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="VTM-KD-m78" detailTextLabel="9uq-mq-X8x" style="IBUITableViewCellStyleValue1" id="thd-iU-Icz">
@@ -227,7 +227,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="smX-tH-E83" firstAttribute="bottom" secondItem="xWw-tt-a1G" secondAttribute="bottom" id="Bsc-yN-L5k"/>
+                            <constraint firstItem="smX-tH-E83" firstAttribute="top" secondItem="xWw-tt-a1G" secondAttribute="top" constant="40" id="1Oh-yn-NQH"/>
                             <constraint firstItem="smX-tH-E83" firstAttribute="trailing" secondItem="xWw-tt-a1G" secondAttribute="trailing" id="F5k-xV-hym"/>
                             <constraint firstItem="yXg-fA-8yi" firstAttribute="leading" secondItem="xWw-tt-a1G" secondAttribute="leading" id="TXW-Pq-HCi"/>
                             <constraint firstItem="yXg-fA-8yi" firstAttribute="top" secondItem="xWw-tt-a1G" secondAttribute="top" constant="20" id="fJQ-9k-ppu"/>
