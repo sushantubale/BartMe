@@ -16,18 +16,21 @@ class BartAPI {
         
         let bartModel = BartModel()
         
-        URLSession.shared.dataTask(with: bartURL!) { (data, response, error) in
+        guard let bartURL = bartURL else {return}
+        URLSession.shared.dataTask(with: bartURL) { (data, response, error) in
             if error == nil {
-                
+                guard let data = data else {return}
                 do {
-                    guard let todo = try JSONSerialization.jsonObject(with: data!, options:.mutableContainers)
+                    guard let todo = try JSONSerialization.jsonObject(with: data, options:.mutableContainers)
                         as? [String: Any] else {
                             print("error trying to convert data to JSON")
                             return
                     }
                     let root = todo["root"] as? [String: Any]
-                    let stations = root!["stations"] as? [String: Any]
-                    let station = stations!["station"] as? [[String: Any]]
+                    guard let newRoot = root else {return}
+                    let stations = newRoot["stations"] as? [String: Any]
+                    guard let newStations = stations else {return}
+                    let station = newStations["station"] as? [[String: Any]]
                     
                     for (_, value) in (station?.enumerated())! {
                             bartModel.cityAbbrevations.append(value["abbr"] as! String)
@@ -52,12 +55,13 @@ class BartAPI {
     
         let routeURL = URL(string: "http://api.bart.gov/api/sched.aspx?cmd=arrive&orig=\(station1 ?? "12TH")&dest=\(station2 ?? "24TH")&date=now&key=MW9S-E7SL-26DU-VV8V&b=2&a=2&l=1&json=y")
         
-        
+        guard routeURL != nil else {return}
         URLSession.shared.dataTask(with: routeURL!) { (data, response, error) in
             if error == nil {
                 
                 do {
-                    guard let todo = try JSONSerialization.jsonObject(with: data!, options:.mutableContainers)
+                    guard let data = data else {return}
+                    guard let todo = try JSONSerialization.jsonObject(with: data, options:.mutableContainers)
                         as? [String: Any] else {
                             print("error trying to convert data to JSON")
                             return
@@ -97,31 +101,24 @@ class BartAPI {
         
         return routeModel
     }
-    
+
     
     static func singleRoute(_ station: String?, completionHandler: @escaping ([Etd]?) -> Void) {
         
         let routeURL = URL(string: "http://api.bart.gov/api/etd.aspx?cmd=etd&orig=\(station ?? "12TH")&key=MW9S-E7SL-26DU-VV8V&json=y")
         
-
+        guard routeURL != nil else {return}
         URLSession.shared.dataTask(with: routeURL!) { (data, response, error) in
             if error == nil {
                 var etds: [Etd]?
                 if let data = data {
                     let model = try? JSONDecoder().decode(DummyResponse.self, from: data)
                     
-                    print(model?.root.stations[0].abbr)
-                    //print(res)
+                    guard model != nil else {return}
                     for station in (model?.root.stations)! {
                         
-                        print("ABBR: \(station.abbr)")
-                        print("Name: \(station.name)")
-                        print("Etds: \(station.etds)")
                         etds = station.etds
-                        print(etds)
-                        print("Etds: \(station.etds[0].estimates[0].minutes)")
                     }
-
                     completionHandler(etds)
                 }
                 else {

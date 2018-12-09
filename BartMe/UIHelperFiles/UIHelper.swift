@@ -535,5 +535,4 @@ extension UIColor {
     class func asbestosColor()->UIColor {
         return UIColor(r:127, g:140, b:141)
     }
-    
 }

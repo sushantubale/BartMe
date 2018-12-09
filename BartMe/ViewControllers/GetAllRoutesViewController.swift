@@ -11,17 +11,19 @@ import UIKit
 class GetAllRoutesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var getAllrouteTextfield: UITextField!
-    @IBOutlet weak var getAllrouteButton: UIButton!
     @IBOutlet weak var stationListTableView: UITableView!
     var stationLists: [String]?
     var stationName: [String]?
     var station1TextFieldSelected: Bool? = true
     lazy var abbrevationsStringsArray: [String] = []
     var finalDestinationTimes: [String] = []
+    var abbrevationsShortform: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // AdditionalUIHelper.addGif(view: self.view, resource: "giftrain_1")
+
         let findButton = SimpleButton(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 200))
         findButton.setTitle("Find All Routes", for: .normal)
         view.addSubview(findButton)
@@ -58,7 +60,8 @@ class GetAllRoutesViewController: UIViewController, UITableViewDelegate, UITable
 
     @IBAction func getAllRoutesButttonClicked(_ sender: Any) {
         
-        if (getAllrouteTextfield.text!.isEmpty) {
+        guard let getAllrouteTextfield = getAllrouteTextfield else {return}
+        if ((getAllrouteTextfield.text?.isEmpty)!) {
             let alert = UIAlertController(title: "Alert!!!!", message: "Please select a valid BART station for the routes.", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [weak self] action in
                 switch action.style{
@@ -107,15 +110,15 @@ class GetAllRoutesViewController: UIViewController, UITableViewDelegate, UITable
                     
                     inAll.append(k.element.minutes)
                 }
-                var inAll2 = inAll.joined(separator: ",")
-                inAll2.append("        min's to        ")
-                inAll2.append(station.element.abbreviation)
+                var inAll2 = inAll.joined(separator: " , ")
+                self?.abbrevationsShortform.append(station.element.abbreviation)
                 self?.finalDestinationTimes.append(inAll2)
             }
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
             vc.destinationTimes = (self?.finalDestinationTimes)!
+            vc.abbrevationsNames = (self?.abbrevationsShortform)!
             DispatchQueue.main.async {
                 self?.present(vc, animated: true, completion: nil)
             }

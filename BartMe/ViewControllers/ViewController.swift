@@ -41,6 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func renderUI() {
         
+        //AdditionalUIHelper.addGif(view: self.view, resource: "giftrain_2")
         station1TextField.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 400)
         view.addSubview(station1TextField)
         station1TextField.addTarget(self, action: #selector(stationTextfieldAction), for: UIControlEvents.touchDown)
@@ -138,6 +139,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
             vc.destinationTimes = routeModel.destinationTimes
+            vc.containsDetailInfo = false
             DispatchQueue.main.async {
                 self?.present(vc, animated: true, completion: nil)
             }

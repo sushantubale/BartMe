@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		026B06F03B4A746FC8E0C474 /* Pods_BartMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C79CA3E330EDBCD0689F98 /* Pods_BartMe.framework */; };
 		0A0E23FA21883042006F4328 /* BartAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E23F921883042006F4328 /* BartAPI.swift */; };
+		0A1D472221BB3C0D000678E1 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D472121BB3C0D000678E1 /* iOSDevCenters+GIF.swift */; };
+		0A1D472821BB3F03000678E1 /* AdditonnalUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D472721BB3F03000678E1 /* AdditonnalUIHelper.swift */; };
 		0A6F99EA2195033200AF0FA1 /* GetAllRoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F99E92195033200AF0FA1 /* GetAllRoutesViewController.swift */; };
 		0A6F99EB2195033200AF0FA1 /* GetAllRoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F99E92195033200AF0FA1 /* GetAllRoutesViewController.swift */; };
 		0A6F99EC2195033200AF0FA1 /* GetAllRoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F99E92195033200AF0FA1 /* GetAllRoutesViewController.swift */; };
@@ -55,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		0A0E23F921883042006F4328 /* BartAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartAPI.swift; sourceTree = "<group>"; };
+		0A1D472121BB3C0D000678E1 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
+		0A1D472721BB3F03000678E1 /* AdditonnalUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditonnalUIHelper.swift; sourceTree = "<group>"; };
 		0A6F99E92195033200AF0FA1 /* GetAllRoutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllRoutesViewController.swift; sourceTree = "<group>"; };
 		0A833AB221B9A50B00247FD5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0A833AB421B9A5A300247FD5 /* TransitionableTab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TransitionableTab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +188,7 @@
 		2548282A218F93A10062A0A3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A1D472121BB3C0D000678E1 /* iOSDevCenters+GIF.swift */,
 				0A833AB221B9A50B00247FD5 /* TabBarViewController.swift */,
 				0AFF5495218810AB0025A424 /* ViewController.swift */,
 				2548282D218F93D30062A0A3 /* DetailViewController.swift */,
@@ -212,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				254828362191ED3D0062A0A3 /* UIHelper.swift */,
+				0A1D472721BB3F03000678E1 /* AdditonnalUIHelper.swift */,
 			);
 			path = UIHelperFiles;
 			sourceTree = "<group>";
@@ -477,6 +483,8 @@
 			files = (
 				25A4C035218A897E00FD3396 /* BartModel.swift in Sources */,
 				0AFF5496218810AB0025A424 /* ViewController.swift in Sources */,
+				0A1D472221BB3C0D000678E1 /* iOSDevCenters+GIF.swift in Sources */,
+				0A1D472821BB3F03000678E1 /* AdditonnalUIHelper.swift in Sources */,
 				0AFF5494218810AB0025A424 /* AppDelegate.swift in Sources */,
 				0A6F99EA2195033200AF0FA1 /* GetAllRoutesViewController.swift in Sources */,
 				2548282E218F93D30062A0A3 /* DetailViewController.swift in Sources */,
