@@ -28,6 +28,13 @@ struct SimpleButtonStateChangeValue<T> {
     let animationDuration: TimeInterval
 }
 
+
+
+
+
+
+
+
 open class SimpleButton: UIButton {
     
     typealias ControlState = UInt
